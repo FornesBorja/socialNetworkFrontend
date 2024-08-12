@@ -1,0 +1,33 @@
+#navbar {
+    display: flex;
+    align-items: center;
+    color: rgb(255, 255, 255);
+    background-color: rgb(73, 124, 235);
+    padding: 1em 0;
+    margin: 0;
+    width: 100vw;
+    box-sizing: border-box;
+  }
+  
+  #navbar div {
+    margin-right: 2em;
+    border-radius: 1em;
+    padding: 0.75em;
+    cursor: pointer;
+  }
+  
+  .right-section {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+  }
+  
+  .log-button {
+    background-color: rgba(0, 64, 148, 0.897);
+    font-family: "Bebas Neue", sans-serif;
+  }
+  .logo {
+    font-size: 2em;
+  }
+  
+  
