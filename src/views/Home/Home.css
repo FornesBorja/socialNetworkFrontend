@@ -1,0 +1,19 @@
+#content {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+  }
+  
+  #container-left {
+    background-color: lightblue;
+    width: 30%;
+    height: 100%;
+  }
+  
+  #container-right {
+    background-color: lightgreen;
+    width: 70%;
+    height: 100%;
+
+  }
+  
