@@ -1,7 +1,14 @@
-import React from 'react'
+import React from "react";
+import { Routes, Route } from "react-router-dom";
+import { NotFound } from '../../views/NotFound/NotFound';
+
 
 export const Body = () => {
   return (
-    <div>Body</div>
-  )
-}
+    <>
+      <Routes>
+        <Route path="*" element={<NotFound />} />
+      </Routes>
+    </>
+  );
+};
