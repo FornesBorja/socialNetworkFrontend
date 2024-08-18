@@ -3,17 +3,42 @@
     width: 100vw;
     height: 100vh;
   }
-  
+  #container-left, #container-right{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
   #container-left {
-    background-color: lightblue;
+    width: 70%;
+    height: 100%;
+  }
+  #container-left div{
+    font-size: 4em;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-bottom: 1em;
+  }
+  
+  #container-right {
     width: 30%;
     height: 100%;
   }
   
-  #container-right {
-    background-color: lightgreen;
-    width: 70%;
-    height: 100%;
+  button{
+    all: unset;
+    background-color: rgb(12, 146, 146);
+    padding: 1em;
+    border-radius: 1em;
+    margin: 2em;
+    font-size: 1.3em;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: aquamarine;
+    cursor: pointer;
+  }
+  button:hover{
+    background-color: aquamarine;
+    color:rgb(12, 146, 146);
 
   }
   
