@@ -3,6 +3,7 @@ html {
   margin: 0;
   padding: 0;
   height: 100%;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif ;
 }
 
 #container {
@@ -20,4 +21,15 @@ html {
   flex: 1;
   display: flex;
   flex-direction: column;
+}
+
+.form{
+  background-color: rgb(3, 66, 75);
+  color: bisque;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 3em;
+  border-radius: 2em;
 }
