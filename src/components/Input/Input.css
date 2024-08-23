@@ -15,3 +15,20 @@
 .disabled{
     opacity: 0.5;
 }
+
+.auth-button{
+    all: unset;
+    background-color: rgb(12, 146, 146);
+    padding: 1em;
+    border-radius: 1em;
+    margin: 2em;
+    font-size: 1.3em;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: aquamarine;
+    cursor: pointer;
+  }
+.auth-button:hover{
+    background-color: aquamarine;
+    color:rgb(12, 146, 146);
+
+  }

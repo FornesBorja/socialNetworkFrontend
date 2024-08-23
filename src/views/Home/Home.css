@@ -24,23 +24,6 @@
     width: 30%;
     height: 100%;
   }
-  
-  button{
-    all: unset;
-    background-color: rgb(12, 146, 146);
-    padding: 1em;
-    border-radius: 1em;
-    margin: 2em;
-    font-size: 1.3em;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    color: aquamarine;
-    cursor: pointer;
-  }
-  button:hover{
-    background-color: aquamarine;
-    color:rgb(12, 146, 146);
-
-  }
   img{
     width: 80%;
   }
