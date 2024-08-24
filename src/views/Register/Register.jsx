@@ -11,6 +11,7 @@ export const Register = () => {
     email: "",
     password: "",
   });
+  const [errorMessage, setErrorMessage] = useState("");
 
   function handleChange(e) {
     console.log("Handle Change");
@@ -24,16 +25,17 @@ export const Register = () => {
   async function register() {
     try {
       console.log(credentials);
-
       const response = await registerUser(credentials);
 
       if (response.success) {
         navigate("/login");
       } else {
-        alert(response.message);
+        console.log(response)
+        setErrorMessage(response.message);
       }
     } catch (error) {
       console.log(error);
+      setErrorMessage("An error occurred. Please try again.");
     }
   }
   return (
@@ -51,6 +53,11 @@ export const Register = () => {
           label="Introduce your password "
           change={handleChange}
         />
+        {errorMessage ? (
+          <div className="error-message">
+            {errorMessage}
+          </div>
+        ):(<div/>)}
         <Input
           name="register-button"
           type="button"
