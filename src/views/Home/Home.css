@@ -14,7 +14,7 @@
     width: 70%;
     height: 100%;
   }
-  #container-left div{
+  .welcome-message{
     font-size: 4em;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin-bottom: 1em;
