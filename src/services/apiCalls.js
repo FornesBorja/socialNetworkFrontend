@@ -1,4 +1,4 @@
-const URL = 'https://social-network-fornesb.zeabur.app/'
+const URL = 'https://social-network-fornesb.zeabur.app'
 
 export const registerUser = async (credentials) => {
 	const request = await fetch(`${URL}/api/auth/register`, {

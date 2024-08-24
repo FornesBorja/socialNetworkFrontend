@@ -8,7 +8,6 @@ export const Register = () => {
   const navigate = useNavigate();
 
   const [credentials, setCredentials] = useState({
-    firstName: "",
     email: "",
     password: "",
   });
@@ -41,11 +40,6 @@ export const Register = () => {
     <div id="container">
       <div className="form">
         <div className="title">Register</div>
-        <Input
-          name="firstName"
-          label="Introduce your name"
-          change={handleChange}
-        />
         <Input
           name="email"
           label="Introduce your email"
