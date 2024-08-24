@@ -37,3 +37,8 @@ html {
   font-size: 3em;
   margin:1em
 }
+.error-message{
+  color: rgb(247, 0, 0);
+  font-weight: bolder;
+  margin: 1em 
+}

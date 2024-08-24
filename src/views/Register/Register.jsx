@@ -30,7 +30,6 @@ export const Register = () => {
       if (response.success) {
         navigate("/login");
       } else {
-        console.log(response)
         setErrorMessage(response.message);
       }
     } catch (error) {
