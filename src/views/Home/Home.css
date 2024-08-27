@@ -3,14 +3,14 @@
     width: 100vw;
     height: 100vh;
   }
-  #container-left, #container-right{
+  .container-left, .container-right{
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
   }
 
-  #container-left {
+  .container-left {
     width: 70%;
     height: 100%;
   }
@@ -20,7 +20,7 @@
     margin-bottom: 1em;
   }
   
-  #container-right {
+  .container-right {
     width: 30%;
     height: 100%;
   }
