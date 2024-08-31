@@ -89,10 +89,10 @@ export const Login = () => {
           <div />
         )}
         <Input
-          name="register-button"
+          name="login-button"
           type="button"
           className={disable ? "button-send disabled" : "button-send"}
-          value="Register"
+          value="Login"
           click={login}
         />
       </div>

@@ -1,8 +1,30 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Input } from "../../components/Input/Input";
 import "./Profile.css";
+import { getProfile } from "../../services/apiCalls";
 
 export const Profile = () => {
+  const [profileData, setProfileData] = useState({
+    email: "",
+    password: "",
+    followers: [],
+    createdAt: "",
+  });
+  const passport = JSON.parse(localStorage.getItem("passport"));
+  const token = passport.token
+
+  useEffect(() => {
+    if (!passport) {
+      navigate("/login");
+    } else {
+      const bringMyProfile = async () => {
+        const response = await getProfile(passport.token);
+        setProfileData(response.data);
+      };
+      bringMyProfile();
+    }
+  }, []);
+
   return (
     <div id="container">
       <div id="content">
@@ -23,7 +45,7 @@ export const Profile = () => {
         </div>
         <div id="container-right">
           <div className="right-top">
-            <div className="name-profile">ejemplo@gmail.com</div>
+            <div className="name-profile">{profileData.email}</div>
             <div className="edit-profile">
               <Input
                 name="edit-profile-button"
