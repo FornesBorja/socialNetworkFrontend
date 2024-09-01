@@ -4,7 +4,6 @@ import Following from "../Following/Following";
 import AllPost from "../allPost/allPost";
 import "./Feed.css";
 import { Input } from "../../components/Input/Input";
-import { Post } from "../../components/Post/Post";
 import { useNavigate } from "react-router-dom";
 import { createPost } from "../../services/apiCalls";
 

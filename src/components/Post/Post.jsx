@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from "react";
-import { getUserPosts, likePost } from "../../services/apiCalls"; 
-import "./Post.css"
+import { getUserPosts, likePost } from "../../services/apiCalls";
+import "./Post.css";
 
-export const Post = ({ token , fetchPosts}) => {
+export const Post = ({ token, fetchPosts }) => {
   const [posts, setPosts] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     const loadPosts = async () => {
@@ -12,12 +13,13 @@ export const Post = ({ token , fetchPosts}) => {
         setPosts(fetchedPosts);
       } catch (error) {
         console.error("Error fetching posts:", error);
+      } finally {
+        setTimeout(() => setIsLoading(false), 300);
       }
     };
 
     loadPosts();
   }, [token, fetchPosts]);
-
   const handleLike = async (postId) => {
     try {
       const updatedPost = await likePost(postId, token);
@@ -33,13 +35,21 @@ export const Post = ({ token , fetchPosts}) => {
 
   return (
     <div className="post-list">
-      {posts.length > 0 ? (
+      {isLoading ? (
+        <div className="loading">
+          <img src="https://cdn.dribbble.com/users/2973561/screenshots/5757826/loading__.gif" alt="loading" />
+        </div>
+      ) : posts.length > 0 ? (
         posts.map((post) => (
           <div key={post._id} className="post-item">
             <h3>{post.title}</h3>
             <p>{post.content}</p>
             {post.multimedia && (
-              <img src={post.multimedia} alt="post multimedia" className="post-image" />
+              <img
+                src={post.multimedia}
+                alt="post multimedia"
+                className="post-image"
+              />
             )}
             <div>
               Likes: {post.likes.length}
