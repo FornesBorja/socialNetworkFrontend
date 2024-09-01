@@ -2,21 +2,21 @@ import React, { useEffect, useState } from "react";
 import { getUserPosts, likePost } from "../../services/apiCalls"; 
 import "./Post.css"
 
-export const Post = ({ token }) => {
+export const Post = ({ token , fetchPosts}) => {
   const [posts, setPosts] = useState([]);
 
   useEffect(() => {
-    const fetchPosts = async () => {
+    const loadPosts = async () => {
       try {
-        const userPosts = await getUserPosts(token);
-        setPosts(userPosts);
+        const fetchedPosts = await fetchPosts(token);
+        setPosts(fetchedPosts);
       } catch (error) {
-        console.error("Error fetching user posts:", error);
+        console.error("Error fetching posts:", error);
       }
     };
 
-    fetchPosts();
-  }, [token]);
+    loadPosts();
+  }, [token, fetchPosts]);
 
   const handleLike = async (postId) => {
     try {
@@ -53,7 +53,7 @@ export const Post = ({ token }) => {
           </div>
         ))
       ) : (
-        <p>Oops...It seems like you haven't posted anything</p>
+        <p>Oops...It seems like there's no post to show</p>
       )}
     </div>
   );

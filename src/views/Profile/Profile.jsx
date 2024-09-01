@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Input } from "../../components/Input/Input";
 import "./Profile.css";
-import { getProfile } from "../../services/apiCalls";
+import { getProfile, getUserPosts } from "../../services/apiCalls";
 import { Post } from "../../components/Post/Post";
 
 export const Profile = () => {
@@ -53,7 +53,7 @@ export const Profile = () => {
             </div>
           </div>
           <div className="right-bottom">
-            <div className="post-container"><Post token={token} /></div>
+            <div className="post-container"><Post fetchPosts={getUserPosts} token={token} /></div>
           </div>
         </div>
       </div>
