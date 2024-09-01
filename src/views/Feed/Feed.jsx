@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import TopBar from "../../components/TopBar/TopBar";
 import Following from "../Following/Following";
-import AllPost from "../allPost/allPost";
+import AllPost from "../AllPost/AllPost";
 import "./Feed.css";
 import { Input } from "../../components/Input/Input";
 import { useNavigate } from "react-router-dom";
