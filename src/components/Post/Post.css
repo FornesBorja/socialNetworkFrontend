@@ -1,0 +1,21 @@
+.post-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .post-item {
+    padding: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .post-item h3 {
+    margin: 0 0 0.5rem 0;
+  }
+  
+.post-image{
+    margin-top: 0.5rem;
+    height: 5em;
+    width: auto;
+}  

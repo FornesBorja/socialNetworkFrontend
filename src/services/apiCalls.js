@@ -37,3 +37,28 @@ export const getProfile = async (token) => {
 
 	return await response.json()
 }
+
+export const getUserPosts = async (token) => {
+	try {
+	  const response = await fetch(
+		"https://social-network-fornesb.zeabur.app/api/posts/own",
+		{
+		  method: "GET",
+		  headers: {
+			Authorization: `Bearer ${token}`,
+			"Content-Type": "application/json",
+		  },
+		}
+	  );
+  
+	  if (!response.ok) {
+		throw new Error(`Error: ${response.status} ${response.statusText}`);
+	  }
+  
+	  const data = await response.json();
+	  return data.data; // Ajusta según la estructura de la respuesta.
+	} catch (error) {
+	  console.error("Error fetching user posts:", error);
+	  throw error;
+	}
+  };
