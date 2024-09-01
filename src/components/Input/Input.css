@@ -59,5 +59,6 @@
     all:unset;
     padding: 1em;
     color:black;
-    background-color: beige;
+    border-bottom: 0.1em solid rgb(82, 80, 80);
+    width: 40em;
   }

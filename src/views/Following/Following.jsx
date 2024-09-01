@@ -1,9 +1,11 @@
 import React from 'react';
+import { getFollowingPosts } from '../../services/apiCalls';
+import { Post } from '../../components/Post/Post';
 
 const Following = () => {
   return (
     <div className="view">
-      <h1>Following</h1>
+      <Post fetchPosts={getFollowingPosts}/>
     </div>
   );
 };

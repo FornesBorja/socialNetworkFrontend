@@ -1,9 +1,11 @@
 import React from 'react';
+import { getAllPosts } from '../../services/apiCalls';
+import { Post } from '../../components/Post/Post';
 
 const AllPost = () => {
   return (
     <div className="view">
-      <h1>All posts</h1>
+      <Post fetchPosts={getAllPosts}/>
     </div>
   );
 };

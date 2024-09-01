@@ -62,6 +62,52 @@ export const getUserPosts = async (token) => {
 	  throw error;
 	}
   };
+
+  export const getAllPosts = async (token) => {
+	try {
+	  const response = await fetch(
+		`${URL}/api/posts/`,
+		{
+		  method: "GET",
+	
+		}
+	  );
+  
+	  if (!response.ok) {
+		throw new Error(`Error: ${response.status} ${response.statusText}`);
+	  }
+  
+	  const data = await response.json();
+	  return data.data;
+	} catch (error) {
+	  console.error("Error fetching user posts:", error);
+	  throw error;
+	}
+  };
+  export const getFollowingPosts = async (token) => {
+	try {
+	  const response = await fetch(
+		`${URL}/api/posts/following`,
+		{
+		  method: "GET",
+		  headers: {
+			Authorization: `Bearer ${token}`,
+		  },
+		}
+	  );
+  
+	  if (!response.ok) {
+		throw new Error(`Error: ${response.status} ${response.statusText}`);
+	  }
+  
+	  const data = await response.json();
+	  return data.data;
+	} catch (error) {
+	  console.error("Error fetching user posts:", error);
+	  throw error;
+	}
+  };
+
 export const likePost = async (postId, token) => {
 	try {
 	  const response = await fetch(
