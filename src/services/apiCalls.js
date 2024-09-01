@@ -69,6 +69,27 @@ export const getUserPosts = async (token) => {
 		`${URL}/api/posts/`,
 		{
 		  method: "GET",
+	
+		}
+	  );
+  
+	  if (!response.ok) {
+		throw new Error(`Error: ${response.status} ${response.statusText}`);
+	  }
+  
+	  const data = await response.json();
+	  return data.data;
+	} catch (error) {
+	  console.error("Error fetching user posts:", error);
+	  throw error;
+	}
+  };
+  export const getFollowingPosts = async (token) => {
+	try {
+	  const response = await fetch(
+		`${URL}/api/posts/following`,
+		{
+		  method: "GET",
 		  headers: {
 			Authorization: `Bearer ${token}`,
 		  },
@@ -80,7 +101,7 @@ export const getUserPosts = async (token) => {
 	  }
   
 	  const data = await response.json();
-	  return data.data; // Ajusta según la estructura de la respuesta.
+	  return data.data;
 	} catch (error) {
 	  console.error("Error fetching user posts:", error);
 	  throw error;
