@@ -41,7 +41,7 @@ export const getProfile = async (token) => {
 export const getUserPosts = async (token) => {
 	try {
 	  const response = await fetch(
-		"https://social-network-fornesb.zeabur.app/api/posts/own",
+		`${URL}/api/posts/own`,
 		{
 		  method: "GET",
 		  headers: {
@@ -62,3 +62,28 @@ export const getUserPosts = async (token) => {
 	  throw error;
 	}
   };
+export const likePost = async (postId, token) => {
+	try {
+	  const response = await fetch(
+		`${URL}/api/posts/like/${postId}`,
+		{
+		  method: "PUT",
+		  headers: {
+			Authorization: `Bearer ${token}`,
+			"Content-Type": "application/json",
+		  },
+		}
+	  );
+  
+	  if (!response.ok) {
+		throw new Error(`Error: ${response.status} ${response.statusText}`);
+	  }
+  
+	  const data = await response.json();
+	  return data.data; 
+	} catch (error) {
+	  console.error("Error liking the post:", error);
+	  throw error;
+	}
+  };
+  

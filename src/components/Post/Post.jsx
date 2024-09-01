@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { getUserPosts } from "../../services/apiCalls"; 
+import { getUserPosts, likePost } from "../../services/apiCalls"; 
 import "./Post.css"
 
 export const Post = ({ token }) => {
@@ -18,6 +18,19 @@ export const Post = ({ token }) => {
     fetchPosts();
   }, [token]);
 
+  const handleLike = async (postId) => {
+    try {
+      const updatedPost = await likePost(postId, token);
+      setPosts((prevPosts) =>
+        prevPosts.map((post) =>
+          post._id === postId ? { ...post, likes: updatedPost.likes } : post
+        )
+      );
+    } catch (error) {
+      console.error("Error liking the post:", error);
+    }
+  };
+
   return (
     <div className="post-list">
       {posts.length > 0 ? (
@@ -25,8 +38,18 @@ export const Post = ({ token }) => {
           <div key={post._id} className="post-item">
             <h3>{post.title}</h3>
             <p>{post.content}</p>
-            {post.multimedia && <img src={post.multimedia} alt="post multimedia" className="post-image"/>}
-            <div>Likes: {post.likes.length}</div>
+            {post.multimedia && (
+              <img src={post.multimedia} alt="post multimedia" className="post-image" />
+            )}
+            <div>
+              Likes: {post.likes.length}
+              <button
+                onClick={() => handleLike(post._id)}
+                className="like-button"
+              >
+                {post.likes.includes(token) ? "Unlike" : "Like"}
+              </button>
+            </div>
           </div>
         ))
       ) : (
