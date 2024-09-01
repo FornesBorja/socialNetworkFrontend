@@ -55,3 +55,9 @@
     color:rgb(68, 70, 70);
     background-color:rgb(178, 180, 180);
   }
+  .post-writing{
+    all:unset;
+    padding: 1em;
+    color:black;
+    background-color: beige;
+  }

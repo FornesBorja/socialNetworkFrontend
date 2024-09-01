@@ -87,3 +87,27 @@ export const likePost = async (postId, token) => {
 	}
   };
   
+export const createPost = async (postData, token) => {
+	try {
+	  const response = await fetch(`${URL}/api/posts`, {
+		method: "POST",
+		headers: {
+		  "Content-Type": "application/json",
+		  Authorization: `Bearer ${token}`,
+		},
+		body: JSON.stringify(postData),
+	  });
+  
+	  if (response.ok) {
+		console.log("Post created succesfully");
+		return true;
+	  } else {
+		console.error("Error creating the post");
+		return false;
+	  }
+	} catch (error) {
+	  console.error("Network error", error);
+	  return false;
+	}
+  };
+  
