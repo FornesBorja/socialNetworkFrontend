@@ -1,0 +1,29 @@
+#content {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+  }
+  .container-left, .container-right{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .container-left {
+    width: 70%;
+    height: 100%;
+  }
+  .welcome-message{
+    font-size: 4em;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-bottom: 1em;
+  }
+  
+  .container-right {
+    width: 30%;
+    height: 100%;
+  }
+  img{
+    width: 80%;
+  }

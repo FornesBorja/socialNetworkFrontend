@@ -1,0 +1,63 @@
+.form-input{
+    all:unset;
+    padding: 1em;
+    color:black;
+    border-radius: 1em;
+    background-color: beige;
+    border: 0.15em,solid, rgb(17, 17, 17);
+    width: 20vw;
+    margin: 0.5em;
+}
+.button-send{
+    background-color:rgb(46, 48, 150);
+    width: auto;
+    color:azure;
+    cursor: pointer;
+}
+.button-send:hover{
+    color:rgb(46, 48, 150);
+    background-color:azure;
+
+}
+.disabled{
+    opacity: 0.5;
+}
+
+.auth-button{
+    all: unset;
+    background-color: rgb(12, 146, 146);
+    padding: 1em;
+    border-radius: 1em;
+    margin: 2em;
+    font-size: 1.3em;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: aquamarine;
+    cursor: pointer;
+  }
+.auth-button:hover{
+    background-color: aquamarine;
+    color:rgb(12, 146, 146);
+
+  }
+  .button-general{
+    all: unset;
+    background-color: rgb(68, 70, 70);
+    border: 0.1em solid black;
+    padding: 1em;
+    border-radius: 1em;
+    margin: 2em;
+    font-size: 1.3em;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: rgb(178, 180, 180);
+    cursor: pointer;
+  }
+  .button-general:hover{
+    color:rgb(68, 70, 70);
+    background-color:rgb(178, 180, 180);
+  }
+  .post-writing{
+    all:unset;
+    padding: 1em;
+    color:black;
+    background-color: beige;
+  }
