@@ -91,6 +91,7 @@ export const getUserPosts = async (token) => {
 		{
 		  method: "GET",
 		  headers: {
+			"Content-Type": "application/json",
 			Authorization: `Bearer ${token}`,
 		  },
 		}
@@ -101,7 +102,7 @@ export const getUserPosts = async (token) => {
 	  }
   
 	  const data = await response.json();
-	  return data.data;
+	  return data;
 	} catch (error) {
 	  console.error("Error fetching user posts:", error);
 	  throw error;

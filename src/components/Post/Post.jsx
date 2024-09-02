@@ -10,6 +10,7 @@ export const Post = ({ token, fetchPosts }) => {
     const loadPosts = async () => {
       try {
         const fetchedPosts = await fetchPosts(token);
+        console.log(fetchedPosts)
         setPosts(fetchedPosts);
       } catch (error) {
         console.error("Error fetching posts:", error);
