@@ -156,4 +156,16 @@ export const createPost = async (postData, token) => {
 	  return false;
 	}
   };
+
+  export const updateProfile = async (data, token) => {
+	const response = await fetch(`${URL}/api/users/profile`, {
+		method: "PUT",
+		headers: {
+			"Content-Type": "application/json",
+			Authorization: `Bearer ${token}`
+		},
+		body: JSON.stringify(data)})
+		
+	return await response.json()
+}
   
