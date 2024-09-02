@@ -15,7 +15,7 @@ export const Header = () => {
   return (
     <div>
       <div id="navbar" className="germania-one">
-        <Surfer path="/" classAdd="jacquard-24" content="Social Network" />
+        <Surfer path={token?"/":"/feed"} classAdd="jacquard-24" content="Social Network" />
         <div className="right-section">
           {token ? (
             <>

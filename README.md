@@ -18,7 +18,7 @@ The main objective was connect the api we did before to a front end made in Reac
   
 ## Deploy 
 <div align="center">
-    🚀<a href="social-network-front.zeabur.app"><strong>Url to frontend </strong></a>🚀
+    🚀<a href="https://social-network-front.zeabur.app"><strong>Url to frontend </strong></a>🚀
 </div>
 
 ## Stack
@@ -39,19 +39,17 @@ The main objective was connect the api we did before to a front end made in Reac
 3. ``` $ npm run dev ```
 
 ## Vistas
-Home
-<img src="https://i.gyazo.com/c8ff09eddb51ef0fb3c8793cd1907345.jpg"/>  
+Home and feed
+<img src="https://i.gyazo.com/80a7362d6492aef2b9af15950c1d9923.png"/>  
+<img src="https://i.gyazo.com/ca5adec3d2e0221d8f43dbfc1ed96281.png"/>  
 Register
-<img src="https://i.gyazo.com/ab7309875bbbc5508e44dac2815302d6.png"/>
+<img src="https://i.gyazo.com/9c55297b2c93aa2de0b4aaa1d3ca83ff.png"/>
 Login
-<img src="https://i.gyazo.com/95ea13453c49dd832542a5abd8ee2e17.png"/>
+<img src="https://i.gyazo.com/7489d4bedd431a410c01862a31cd57d6.png"/>
 Profile
-<img src="https://i.gyazo.com/1dc939b8bd41ee98dae2dbb6317dfac8.png"/>
-<img src="https://i.gyazo.com/07ed267ad2dbdb4d6f4e31a054549ecd.png"/>
-Services
-<img src="https://i.gyazo.com/da36d9757107879af0c5c1d308e26bf8.png)"/>
-Admin panel
-<img src="https://i.gyazo.com/66f104fae792dc0254c7192f8d94fb15.png"/>
+<img src="https://i.gyazo.com/8e07f30ad028978cefcd652f28bf9146.png"/>
+<img src="https://i.gyazo.com/566f609688229ef02cc607773f7478e2.png"/>
+
 
 ## Future functionalities
 ⬜ Improved CSS.
