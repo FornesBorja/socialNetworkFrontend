@@ -6,11 +6,19 @@ import { Register } from "../../views/Register/Register";
 import { Login } from "../../views/Login/Login";
 import { Profile } from "../../views/Profile/Profile";
 import { Feed } from "../../views/Feed/Feed";
+import { Admin } from "../../views/Admin/Admin";
 
 export const Body = () => {
+  const passport = JSON.parse(localStorage.getItem("passport"));
+
   const isLoggedIn = () => {
-    return !!localStorage.getItem("passport");
+    return !!passport;
   };
+
+  let role = null;
+  if (passport && passport.tokenData) {
+    role = passport.tokenData.role;
+  }
   return (
     <>
       <Routes>
@@ -20,6 +28,9 @@ export const Body = () => {
         <Route path="/login" element={<Login />} />
         <Route path="/profile" element={<Profile />} />
         <Route path="/feed" element={<Feed />} />
+        {isLoggedIn() && role === "super_admin" && (
+          <Route path="/admin" element={<Admin />} />
+        )}
       </Routes>
     </>
   );

@@ -10,13 +10,14 @@ export const Header = () => {
   let token, role;
   if (passport) {
     token = passport.token;
-    role = passport.tokenData.roleId;
+    role = passport.tokenData?.role;
   }
   return (
     <div>
       <div id="navbar" className="germania-one">
         <Surfer path={token?"/":"/feed"} classAdd="jacquard-24" content="Social Network" />
         <div className="right-section">
+        {role==="super_admin"?(<Surfer path="/admin" classAdd="log-button" content="Admin"/>):null}
           {token ? (
             <>
               <div
